@@ -1,0 +1,19 @@
+<statement> ::= <if> | <loop> | <function> | <return> | <assignment> | <call>
+
+<assignment> ::= ( <name> | <subscript> ) "=" ( <expression> | <array> | <dict> )
+
+<expression> ::= <term> { ("+" | "-") <term> }>
+<term> ::= <factor> { ("*" | "/") <factor> }>
+<factor> ::= <number> | <string> | <boolean> | <paren> | <array> | <dict> | <identifier>
+
+<paren> ::= "(" <expression> ")"
+<array> ::= "[" [ <expression> { "," <expression> } ] "]"
+<dict> ::= "{" [ <expression> ":" <expression> { "," <expression> ":" <expression> } ] "}"
+<identifier> ::= <name> | <subscript> | <call>
+
+<if> ::= "if" <comparison> ":" <block> { "elif" <comparison> ":" <block> } [ "else" ":" <block> ]
+<comparison> ::= <expression> ( "==" | "!=" | "<" | "<=" | ">" | ">=" ) <expression>
+<block> ::= { <statement> }
+
+<loop> ::= "loop" (<comparison> | { <variable "<-" } <range> ) ":" <block>
+<range> ::= <expression> "~" <expression>

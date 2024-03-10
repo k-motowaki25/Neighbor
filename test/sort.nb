@@ -1,0 +1,11 @@
+func bubble(data):
+    loop i <- 0 ~ length(data):
+        loop j <- 0 ~ length(data)-i-2:
+            if data[j] > data[j+1]:
+                temp = data[j]
+                data[j] = data[j+1]
+                data[j+1] = temp
+    ↵ data
+
+data = [5, 4, 3, 2, 1]
+print(bubble(data))

@@ -1,0 +1,24 @@
+func add(a, b):
+    ↵ a + b
+
+func sub(a, b):
+    ↵ a - b
+
+func mul(a, b):
+    ↵ a * b
+
+func div(a, b):
+    ↵ a / b
+
+a = int(input("Enter a: "))
+b = int(input("Enter b: "))
+op = input("Enter operation (add, sub, mul, div): ")
+
+if op == "add":
+    print("Result: ", add(a, b))
+if op == "sub":
+    print("Result: ", sub(a, b))
+if op == "mul":
+    print("Result: ", mul(a, b))
+if op == "div":
+    print("Result: ", div(a, b))

@@ -7,7 +7,7 @@ FILENAME = ARGV[0]
 
 tokenizer = Tokenizer.new(File.read(FILENAME, encoding: "UTF-8"))
 tokens = tokenizer.tokenize
-# p tokens
+p tokens
 
 parser = Parser.new(tokens)
 ast = parser.parse

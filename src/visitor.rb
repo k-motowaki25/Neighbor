@@ -97,9 +97,9 @@ class Visitor
     end
 
     def visit_ast_block(node, context)
-        block_context = context.clone
+        # block_context = context.clone
         node.body.each do |child|
-            result = visit(child, block_context)
+            result = visit(child, context)
             return result if child.is_a?(AST_Return)
         end
     end

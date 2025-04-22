@@ -1,12 +1,12 @@
 token:
   if: &if "if"
   loop: &loop "loop"
-  function: &function "func"
+  function: &function "ƒ"
   return: &return "↵"
   # trueとfalseは以下factorのbooleanで定義
   name: &name "[a-zA-Z_][a-zA-Z0-9_]*"
   number: &number "\\d+"
-  string: &string "\".+?\""
+  string: &string '".+?"'
   allow: "<-"
   plus: "\\+"
   minus: "\\-"

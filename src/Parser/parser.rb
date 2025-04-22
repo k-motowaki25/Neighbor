@@ -169,7 +169,7 @@ class Parser
     end
 
     def parse_function
-        skip("func")
+        skip("ƒ")
         name = parse_name(:store)
         skip("(")
         args = []

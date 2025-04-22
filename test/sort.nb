@@ -7,5 +7,5 @@ func bubble(data):
                 data[j+1] = temp
     ↵ data
 
-data = [5, 4, 3, 2, 1]
+data = [4, 8, 2, 10, 6]
 print(bubble(data))
